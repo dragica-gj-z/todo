@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="container"></div>
+        <div class="nav">
+
+            <div class="weather">
+                <div class="city-input">
+                    <input type="text" placeholder="Enter any city..." id="cityinput">
+                    <button placeholder="submit" id="add"><i class="fa-solid fa-plus fa-xl"></i></button>
+                 </div>
+                <h2 id="cityoutput"></h2>
+                <p id="description"></p>
+                <p id="temp"></p>
+                <p id="wind"></p>
+            </div>
+
+            <h1>To do list</h1>
+
+            <div class="time">
+                <h2 class="current-time" id="date"></h2>
+                <h2 class="current-time" id="time"></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="user-iput">
+        <input id="input" type="text" placeholder="I need to do..."><button onclick="addItem()">Add</button>
+    </div>
+
+    <div class="second-container">     
+        <div class="to-do-items">      
+        </div>
+
+        <div class="calendar">
+            <div class="calendar-conteiner">
+                <h3 id="monthAndYear"></h3>
+                <div class="buttons-conteiner">
+                    <button id="previous" onclick="previous()">&#8249;</button>
+                    <button id="next" onclick="next()">&#8250;</button>
+                </div>
+                <table class="table-calendar" id="calendar" data-lang="en">
+                    <thead id="thead-month"></thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+                
+                <div class="footer-container-calendar">
+                     <label for="month">Jump To: </label>
+                     <select id="month" onchange="jump()">
+                         <option value=0>Jan</option>
+                         <option value=1>Feb</option>
+                         <option value=2>Mar</option>
+                         <option value=3>Apr</option>
+                         <option value=4>May</option>
+                         <option value=5>Jun</option>
+                         <option value=6>Jul</option>
+                         <option value=7>Aug</option>
+                         <option value=8>Sep</option>
+                         <option value=9>Oct</option>
+                         <option value=10>Nov</option>
+                         <option value=11>Dec</option>
+                     </select>
+                     <select id="year" onchange="jump()"></select>       
+                </div>
+            </div> 
+        </div>   
+    </div>
+   <!-- Script --> 
+   <script src="script.js"></script>
+</body>
+</html>

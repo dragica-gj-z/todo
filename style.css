@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Public Sans', sans-serif;
+    background-image: linear-gradient(90deg, #F5EA5A, #0E8388);
+    color: aliceblue;
+}
+/* Weather App */
+
+.weather {
+    display: grid;
+    color: #143F6B;
+}
+.city-input {
+    display: flex;
+    margin-bottom: 10px;
+}
+h1 {
+    color: #143F6B;
+    font-size: 2.5rem;
+    padding: 10px 0;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+.time {
+    font-size: 1rem;
+    text-align: center;
+    color: #F5EA5A;
+}
+.current-time {
+    padding-bottom: 7px;
+}
+.nav {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    margin: 25px 25px;
+}
+.user-iput {
+   width: 40%;
+   margin: 50px auto;
+   
+}
+input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid lightgrey;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+   -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+input:focus {
+    box-shadow: 0 0 10px darkgray;
+    border: 1px solid #df547c;
+}
+button {
+    cursor: pointer; /* prave se race so prste */
+    padding: 8px;
+    width: 20%;
+    transition: 1s;
+    outline: none;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+button:hover {
+    background-color: transparent;
+    color: aliceblue;
+}
+/* To do list*/
+.second-container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.to-do-items {
+    width: 40%;
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+.item {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    padding: 16px;
+    color: #454545;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    
+}
+
+.item i {
+    cursor: pointer;
+    margin: 0 5px;
+}
+.item:hover {
+    box-shadow: 0 0 10px #df547c;
+    border: 1px solid #df547c;
+}
+
+/* CALENDAR */
+.calendar {
+    max-width: 300px;
+}
+
+.table-calendar {
+    border-collapse: collapse;
+    width: 300px;
+}
+
+.table-calendar td, .table-calendar th {
+    padding: 5px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+}
+
+.date-picker.selected {
+    font-weight: bold;
+    outline: 1px dashed #df547c;
+}
+
+.date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+}
+
+/* sunday */
+.date-picker:nth-child(1) {
+  color: red;
+}
+
+#monthAndYear {
+    text-align: center;
+    margin-top: 0;
+}
+
+.buttons-conteiner {
+    margin-bottom: 1em;
+    overflow: hidden; 
+}
+
+#previous {
+    float: left;
+    border-radius: 5px;
+}
+
+#next {
+    float: right;
+    border-radius: 5px;
+}
+
+.footer-container-calendar {
+    margin: 17px 0;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+}
+
+.footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #585858;
+    border: 1px solid #bfc5c5;
+    border-radius: 5px;
+    padding: 5px 1em;
+    outline: none;
+}
+
+@media (max-width:768px) {
+    .nav {
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav h1 {
+        margin: 10px 0;
+    }
+    .weather {
+        text-align: center;
+    }
+    
+    .user-iput {
+        width: 60%;
+        margin: 50px auto;
+    }
+    .to-do-items {
+        width: 80%;
+    }
+    h1 {
+        color: #143F6B;
+    }
+}
+
+@media (max-width:480px) {
+    .to-do-items {
+        width: 90%;
+    }
+}
+@media (max-width:320px) {
+    .to-do-items {
+        width: 100%;
+    }
+}
+
+
