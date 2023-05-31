@@ -38,8 +38,8 @@ function addItem(){
 const date = new Date();
 const months = ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"];
 var m = months[date.getMonth()];
-const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "San"];
-var d = days[date.getDay()-1];
+const days = ["San", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var d = days[date.getDay()];
 document.getElementById("date").innerHTML = d + " " + m + " " + date.getDate();
 document.getElementById("time").innerHTML =date.getHours() + ":" + date.getMinutes();
 
